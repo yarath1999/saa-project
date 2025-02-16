@@ -3,37 +3,68 @@
     margin: 0px;
 }
 
-.full-body {
-    height: Auto;
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     font-family: "Poppins", sans-serif;
 }
 
-.Objective_Section{
-    width: auto;
-    height: auto;
-}
-
-.objective_Head{
-    padding: 5px 10px 5px 10px;
+.main-title {
     text-align: center;
+    color: #f02f2d;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 0;
 }
 
-.objHeadText{
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: normal;
+.split-container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.half {
+    width: 50%;
+    padding: 2rem;
+}
+
+.left-half {
+    border-right: 1px solid #e2e2e2;
+}
+
+.objective-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.objective-item h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     color: #f02f2d;
 }
 
-.objective_Para{
-    padding: 5px 10px 5px 10px;
-    text-align: justify;
-    line-height: 2;
+.objective-item p {
+    color: #4a4a4a;
+    line-height: 1.6;
 }
 
-.objParaText{
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
+.objective-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .half {
+        width: 100%;
+    }
+
+    .left-half {
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+    }
 }
