@@ -761,55 +761,116 @@ body {
     transform: scale(1.05);
 }
 
-/* Alumni Stats */
+@media (max-width: 768px) {
+    .find-event-row2 {
+        flex-direction: column;
+        height: auto;
+        border-left: none;
+        border-top: 4px solid rgb(228, 26, 26);
+    }
+
+    .find-event-left {
+        display: none;
+    }
+
+    .find-event-middle {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .find-event-right {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .events-container {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .event-card {
+        width: 210px;
+        flex: 0 0 auto;
+    }
+}
+
+/* Alumni Stats Section */
 .Stats-Horizontal-Section {
     display: flex;
-    height: 16%;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .alumni-stats {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    margin: 2px;
     display: flex;
     flex-direction: row;
+    gap: 50px;
+    max-width: 1300px;
+    width: 100%;
 }
 
+/* Social Post Section */
 .social-post {
     background-color: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 45%;
 }
 
-/* Social tabs */
+.social-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-text h3 {
+    font-size: 2rem;
+    color: #F02F2D;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-text p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-text #tags2 {
+    border: 1px dotted #555;
+    border-radius: 20px;
+    padding: 2px 20px;
+    line-height: 25px;
+}
+
+#tags {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.2rem;
-    justify-content: flex-start;
-    padding-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    gap: 10px;
+    justify-content: center;
 }
 
 .social-link {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0.8rem 0.5rem;
+    gap: 5px;
+    padding: 10px 20px;
     border-radius: 25px;
-    text-decoration: none;
     color: white;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-link:hover {
-    opacity: 1;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -823,7 +884,7 @@ body {
 }
 
 .social-link.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .social-link.linkedin {
@@ -834,62 +895,19 @@ body {
     background-color: #FF0000;
 }
 
-.social-text h3 {
-    text-align: center;
-    font-size: 50px;
-    font-family: "Poppins";
-    letter-spacing: 0.5px;
-    color: #F02F2D;
-}
-
-.social-text p {
-    font-family: "Roboto";
-    padding: 10px;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    margin: 20px;
-    border: 2px dotted grey;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-#tags {
-    font-family: "Roboto";
-    font-weight: 300;
-    font-size: 20px;
-    border: none;
-}
-
 .social-stats {
     display: flex;
     justify-content: space-around;
-    text-align: center;
-    padding: 1.5rem;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f1f1f1;
     border-radius: 10px;
-}
-
-.stat {
-    padding: 0.5rem 1rem;
-    position: relative;
-}
-
-.stat:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -0.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70%;
-    width: 1px;
-    background-color: #F02F2D;
-    opacity: 0.2;
 }
 
 .stat .number,
 .stat .plus {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     color: #F02F2D;
@@ -898,7 +916,7 @@ body {
 }
 
 .stat .label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #333;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -907,227 +925,133 @@ body {
     margin-top: 0.5rem;
 }
 
+/* AMP Section */
 .chapters-batch-box {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: rgb(255, 255, 255);
-    width: 60%;
-    height: 633px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 55%;
 }
 
 .chapters-row1 {
     display: flex;
-    height: 80%;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
 }
 
 .be-a-mentor-container {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.be-a-mentor-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.buttons-container {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px rgb(232, 232, 232) solid;
-}
-
-.AMP-button {
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    color: #F02F2D;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.be-a-mentor {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mentor-card {
-    background-color: white;
-    background-image: linear-gradient(111deg, #ff0300, #eb2f96);
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    background: linear-gradient(111deg, #ff0300, #eb2f96);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+    max-height: auto;
 }
 
 .mentor-card h3 {
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .mentor-card p {
-    font-size: 17px;
-    margin-bottom: 20px;
-    font-family: "Poppins";
-    color: white;
-    text-align: left;
-    padding: 25px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.mentor-button {
-    background-color: white;
-    color: #F02F2F;
-    text-decoration: none;
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.AMP-button {
     padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #F02F2D;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.mentor-button:hover {
-    background-color: #F02F2F;
+.AMP-button:hover {
+    background-color: #F02F2D;
     color: white;
-    box-shadow: 0 4px 10px rgba(240, 47, 47, 0.5);
 }
 
 .chapters-row1-col2 {
-    width: 65%;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
+    width: 50%;
 }
 
 .chapters-batch-box-col2 {
     background-color: white;
-    width: 100%;
-    height: auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    border-radius: 10px;
 }
 
 .chapters-batch-box-col2 h3 {
-    font-size: 24px;
-    color: #F02F2F;
-    margin-top: 20px;
-    text-align: right;
-    font-family: "Poppins";
+    font-size: 1.5rem;
+    color: #F02F2D;
+    margin-bottom: 10px;
 }
 
 .chapters-batch-box-col2 p {
-    font-size: 16px;
+    font-size: 0.9rem;
     color: #333;
     line-height: 1.5;
-    text-align: left;
-    font-family: "Poppins";
 }
 
 .chapters-batch-box-col2 ul {
     list-style-type: disc;
     padding-left: 20px;
-    font-family: "Poppins";
 }
 
 .chapters-batch-box-col2 li {
-    font-size: 16px;
+    font-size: 0.9rem;
     color: #555;
-    font-family: "Poppins";
-}
-
-.chapters-batch-box-col2 li strong {
-    color: #F02F2F;
-}
-
-.chapters-batch-box-col2 strong {
-    color: #F02F2F;
+    margin-bottom: 10px;
 }
 
 .description-chapter-batch-box-row2-col1 {
-    height: 20%;
-    background-color: wheat;
-    display: flex;
-}
-
-.description-chapter-batch-box-row2-col1-text {
-    width: 100%;
-    max-height: 100%;
-    padding: 20px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@keyframes typing-effect {
-    from {
-        width: 0;
-    }
-}
-
-to {
-    width: 100%;
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+    text-align: center;
+    margin-top: 20px;
 }
 
 .heading-intro h3 {
-    text-align: center;
-    font-size: 50px;
-    font-family: "Poppins";
-    letter-spacing: 0.5px;
+    font-size: 2rem;
     color: #F02F2D;
-    margin-bottom: 30px;
-    overflow: hidden;
-    text-align: center;
-    white-space: nowrap;
-    display: inline-block;
-    animation: typing-effect 2.5s steps(30, end), blink 0.3s step-end infinite alternate;
-    animation-play-state: paused;
-    /* Ensure animation is paused initially */
 }
 
-
-.intro-paragraph p {
-    font-family: "Poppins";
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    border: 2px dotted grey;
-    padding: 20px;
-    font-style: italic;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .alumni-stats {
+        flex-direction: column;
     }
 
-    to {
-        transform: translateX(-100%);
+    .social-post,
+    .chapters-batch-box {
+        width: 100%;
+    }
+
+    .chapters-row1 {
+        flex-direction: column;
+    }
+
+    .be-a-mentor-container,
+    .chapters-row1-col2 {
+        width: 100%;
+    }
+
+    .stat .number,
+    .stat .plus {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 30px;
     }
 }
 
@@ -1361,7 +1285,7 @@ to {
     display: flex;
     flex-wrap: wrap;
     gap: 1.2rem;
-    justify-content: center;
+    justify-content: space-between;
     padding-left: 20px;
     margin-bottom: 50px;
 }

@@ -283,13 +283,6 @@ body {
     gap: 20px;
 }
 
-.social-image {
-    height: 200px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-}
-
 .social-text h3 {
     font-size: 2rem;
     color: #F02F2D;
@@ -302,6 +295,12 @@ body {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.social-text #tags2 {
+    border: 1px dotted #555;
+    border-radius: 20px;
+    padding: 2px 20px;
 }
 
 #tags {
@@ -362,25 +361,30 @@ body {
     border-radius: 10px;
 }
 
-.stat {
-    text-align: center;
-}
-
-.stat .number {
-    font-size: 1.5rem;
+.stat .number,
+.stat .plus {
+    display: inline-block;
+    font-size: 1.7rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     color: #F02F2D;
+    margin-bottom: 1rem;
+    vertical-align: middle;
 }
 
 .stat .label {
     font-size: 0.8rem;
-    color: #555;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
 }
 
 /* AMP Section */
 .chapters-batch-box {
     background-color: white;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 55%;
@@ -390,6 +394,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    padding: 20px;
 }
 
 .be-a-mentor-container {
@@ -398,6 +403,7 @@ body {
     border-radius: 10px;
     color: white;
     width: 50%;
+    max-height: auto;
 }
 
 .mentor-card h3 {
@@ -494,6 +500,15 @@ body {
     .be-a-mentor-container,
     .chapters-row1-col2 {
         width: 100%;
+    }
+
+    .stat .number,
+    .stat .plus {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 30px;
     }
 }
 
